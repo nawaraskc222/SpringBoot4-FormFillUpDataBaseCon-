@@ -2,7 +2,13 @@
 
 package com.example.SpringBoot4.SpringBoot4;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Customer {
+	
+	@Id
 	private int cid;
 	private String cname;
 	private String cmail;

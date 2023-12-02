@@ -22,10 +22,10 @@
 <body>
 <h1>Fill Up The Form:</h1>
     
-    <form method="post" action="cdetails">
+    <form method="post" action="jsptocontrolleraction">
     Enter cid: <input type="number" id="cid" name="cid"><br>
     Enter cname: <input type="text" id="cname" name="cname"><br>
-    Enter cmail: <input type="email" id="cmail" name="cmail"><br>
+    Enter cmail: <input type="text" id="cmail" name="cmail"><br>
     <input type="submit" value="submit"><br>
 </form>
     

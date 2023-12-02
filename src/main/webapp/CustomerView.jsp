@@ -10,9 +10,9 @@
 
 <h1>View Customer Details</h1>
 Details as submitted as follows<br>
-Customer ID : ${cid}<br>
-Customer Name : ${cname}<br>
-Customer Email : ${cmail}<br>
+${cmail}
+${cid }
+${cname }
 
 </body>
 </html>
