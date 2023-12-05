@@ -3,15 +3,26 @@
 package com.example.SpringBoot4.SpringBoot4;
 
 import jakarta.persistence.Entity;
+
 import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.*;
+
+
 
 @Entity
 public class Customer {
 	
+	@Getter @Setter
 	@Id
 	private int cid;
+	@Getter @Setter
 	private String cname;
+	@Getter @Setter
 	private String cmail;
+
 	public int getCid() {
 		return cid;
 	}

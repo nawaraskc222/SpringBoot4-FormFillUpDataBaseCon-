@@ -11,8 +11,8 @@
 <h1>View Customer Details</h1>
 Details as submitted as follows<br>
 ${cmail}
-${cid }
-${cname }
+${cid}
+${cname}
 
 </body>
 </html>

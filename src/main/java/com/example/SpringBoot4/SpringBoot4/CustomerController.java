@@ -23,41 +23,36 @@ public class CustomerController {
      return "Customer.jsp";
      }
     
+    ///Process 1 to store data to H2
     
-    @PostMapping("/jsptocontrolleraction")///jsptocontrolleraction connected to jsp
-    public String userAddtoHtwo(@ModelAttribute Customer customer,Model model) {
-    	  	   	
-        Customer user=repo.save(customer);
-    	    	
-    	model.addAttribute("cname",user.getCname());
-    	model.addAttribute("cid",user.getCid());
-    	model.addAttribute("cmail",user.getCmail());
-    	
-    	
-    	return "CustomerView.jsp";
-    }
+//    @PostMapping("/jspViewData")///action=jspViewData connected to jsp page
+//    public String getDetails(@ModelAttribute Customer customer,Model model) {
+//    	  	   	
+//        Customer user=repo.save(customer);
+//    	    	
+//    	model.addAttribute("cname",user.getCname());
+//    	model.addAttribute("cid",user.getCid());
+//    	model.addAttribute("cmail",user.getCmail());
+//    	
+//    	
+//    	return "CustomerView.jsp";
+//    }
     
-//    @RequestMapping("/")
-//    public String home() {
-//        return "Customer.jsp";
-//    }
-//
-//    @RequestMapping("/saveDetails")
-//    public String saveDetails(Customer customer) {
-//        repo.save(customer);
-//        return "Customer.jsp";
-//    }
-//
-//    @GetMapping("/getDetailsForm")
-//    public String getDetailsForm() {
-//        return "CustomerView.jsp";
-//    }
-//
-//    @PostMapping("/getDetails")
-//    public ModelAndView getDetails(@RequestParam("cid") int cid) {
-//        ModelAndView mv = new ModelAndView("Retrieve.jsp");
-//        Customer customer = repo.findById(cid).orElse(null);
-//        mv.addObject("customer", customer);
-//        return mv;
-//    }
+    ///Process 2 to store data to H2
+    
+    @PostMapping("/jspViewData")
+  public ModelAndView getDetails(@ModelAttribute Customer customer){
+    	Customer user=repo.save(customer);
+    	
+     ModelAndView mv = new ModelAndView("CustomerView.jsp");
+     
+     mv.addObject("cname", user.getCname());
+     mv.addObject("cid", user.getCid());
+     mv.addObject("cmail", user.getCmail());
+     
+     
+     return mv;
+     
+ }
+    
 }

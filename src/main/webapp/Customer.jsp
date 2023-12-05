@@ -20,9 +20,11 @@
     </style>
 </head>
 <body>
+
+
 <h1>Fill Up The Form:</h1>
     
-    <form method="post" action="jsptocontrolleraction">
+    <form method="post" action="jspViewData">
     Enter cid: <input type="number" id="cid" name="cid"><br>
     Enter cname: <input type="text" id="cname" name="cname"><br>
     Enter cmail: <input type="text" id="cmail" name="cmail"><br>
